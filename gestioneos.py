@@ -64,6 +64,7 @@ def logement(ID_logement):
     return render_template('logement.html', ID_logement=logement_info[0],loyer=logement_info[1], description=logement_info[2],nom=logement_info[3])
 
 
+
 @app.route('/recherche_<int:ID_logement>')
 def recherche(ID_logement):
      questions = questionnaire(ID_logement)
