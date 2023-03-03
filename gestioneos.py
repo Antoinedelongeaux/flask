@@ -73,13 +73,13 @@ def recherche(ID_logement):
 def submit(ID_logement):
      ID_recherche=questionnaire(ID_logement)[0]
      print(ID_recherche)
-     réponse_1 = request.form['Réponse_1']
-     réponse_2 = request.form['Réponse_2']
-     réponse_3 = request.form['Réponse_3']
-     email = request.form['Réponse_4']
-     prospect = supabase.table("prospects").insert({'ID_recherche':ID_recherche,"reponse_1":réponse_1 , "reponse_2":réponse_2 , "reponse_3":réponse_3 , "email":email }).execute()
+     reponse_1 = request.form['Reponse_1']
+     reponse_2 = request.form['Reponse_2']
+     reponse_3 = request.form['Reponse_3']
+     email = request.form['Reponse_4']
+     prospect = supabase.table("prospects").insert({'ID_recherche':ID_recherche,"reponse_1":reponse_1 , "reponse_2":reponse_2 , "reponse_3":reponse_3 , "email":email }).execute()
      assert len(prospect.data) > 0
-     return "Merci pour votre réponse !"
+     return "Merci pour votre reponse !"
 
 
 
