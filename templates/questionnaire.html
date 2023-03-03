@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Questionnaire</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      form {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        padding: 50px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      }
+
+      label {
+        display: block;
+        margin-bottom: 20px;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+      }
+
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Questionnaire</h1>
+    <form action="/submit_{{ID_logement}}" method="post">
+      <label for="response_1">{{ question_1 }}</label>
+      <input type="text" id="response_1" name="Réponse_1"><br>
+      <label for="response_2">{{ question_2 }}</label>
+      <div>
+        <input type="radio" id="response_2_oui" name="Réponse_2" value="true">
+        <label for="response_2_oui">Oui</label>
+      </div>
+      <div>
+        <input type="radio" id="response_2_non" name="Réponse_2" value="false">
+        <label for="response_2_non">Non</label>
+      </div>
+      <label for="response_3">{{ question_3 }}</label>
+      <div>
+        <input type="radio" id="response_3_oui" name="Réponse_3" value="true">
+        <label for="response_3_oui">Oui</label>
+      </div>
+      <div>
+        <input type="radio" id="response_3_non" name="Réponse_3" value="false">
+        <label for="response_3_non">Non</label>
+      </div>
+      <label for="response_4">Email</label>
+      <input type="text" id="response_4" name="Réponse_4"><br>
+      <input type="submit" value="Envoyer">
+    </form>
+  </body>
+  
+</html>
+
+
